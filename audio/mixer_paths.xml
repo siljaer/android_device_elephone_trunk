@@ -91,9 +91,9 @@
     <ctl name="RX1 MIX2 INP2" value="ZERO" />
     <ctl name="RX1 MIX2 INP1" value="ZERO" />
     
-    <-- Mixer1 settings. MIX1 possible inputs are: -->
-    <-- ZERO, DEC1, DEC2, RX1, RX2, RX3            -->
-    <-- typically used for routing/mixing          -->
+    <!-- Mixer1 settings. MIX1 possible inputs are: -->
+    <!-- ZERO, DEC1, DEC2, RX1, RX2, RX3            -->
+    <!-- typically used for routing/mixing          -->
     <ctl name="RX3 MIX1 INP2" value="ZERO" />
     <ctl name="RX3 MIX1 INP1" value="ZERO" />
     <ctl name="RX2 MIX1 INP2" value="ZERO" />
