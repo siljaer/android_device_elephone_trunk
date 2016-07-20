@@ -73,19 +73,19 @@
     <ctl name="ADC2 Volume" value="9" />
     <ctl name="ADC3 Volume" value="9" />
     
-    <-- digital gains for decimation filters DEC1 and DEC2 -->
-    <-- 84 = 0 dB -->
+    <!-- digital gains for decimation filters DEC1 and DEC2 -->
+    <!-- 84 = 0 dB -->
     <ctl name="DEC1 Volume" value="77" />
     <ctl name="DEC2 Volume" value="90" />
     
-    <-- DEC1 and DEC2, ADC2 and RDAC1 MUXs -->
+    <!-- DEC1 and DEC2, ADC2 and RDAC1 MUXs -->
     <ctl name="DEC2 MUX" value="ZERO" />
     <ctl name="DEC1 MUX" value="ZERO" />
     <ctl name="ADC2 MUX" value="ZERO" />
     <ctl name="RDAC2 MUX" value="ZERO" />
     
-    <-- Mixer2 settings. MIX2 possible inputs are:    -->
-    <-- ZERO, IIR1, IIR2. Typically used for sidetone -->
+    <!-- Mixer2 settings. MIX2 possible inputs are:    -->
+    <!-- ZERO, IIR1, IIR2. Typically used for sidetone -->
     <ctl name="RX2 MIX2 INP2" value="ZERO" />
     <ctl name="RX2 MIX2 INP1" value="ZERO" />
     <ctl name="RX1 MIX2 INP2" value="ZERO" />
@@ -93,6 +93,7 @@
     
     <-- Mixer1 settings. MIX1 possible inputs are: -->
     <-- ZERO, DEC1, DEC2, RX1, RX2, RX3            -->
+    <-- typically used for routing/mixing          -->
     <ctl name="RX3 MIX1 INP2" value="ZERO" />
     <ctl name="RX3 MIX1 INP1" value="ZERO" />
     <ctl name="RX2 MIX1 INP2" value="ZERO" />
@@ -664,10 +665,6 @@
         <ctl name="RX1 MIX2 INP1" value="IIR1" />
     </path>
 
-    <!-- sidetone for headphone: enable bands,    -->
-    <!-- mix RX1 and RX2 (signals to headphones)  -->
-    <!-- with IIR1 (filtered signal from headset  -->
-    <!-- mic, set IIR1 input (mic) volume         -->
     <path name="sidetone-headphone">
     	<!-- enable IIR1 filtering -->
         <path name="sidetone-iir" />
