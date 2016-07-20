@@ -49,41 +49,72 @@
     <ctl name="Voip Evrc Min Max Rate Config" id="1" value="4" />
     <ctl name="Voip Dtx Mode" value="0" />
     <ctl name="TTY Mode" value="Off" />
+    
+    <!-- headphone volume, left/right -->
     <ctl name="HPHL Volume" value="15" />
     <ctl name="HPHR Volume" value="15" />
+    
+    <!-- digital gains for interpolation filters RX1, RX2, RX3 -->
+    <!-- 84 = 0 dB -->
     <ctl name="RX1 Digital Volume" value="77" />
     <ctl name="RX2 Digital Volume" value="90" />
     <ctl name="RX3 Digital Volume" value="90" />
+    
+    <!-- digital gains for infinite impulse response filter  -->
+    <!-- inputs. 84 = 0 dB -->
+    <!-- IIR1 possible inputs are: ZERO, DEC1, DEC2, RX1, RX2, RX3 -->
     <ctl name="IIR1 INP1 Volume" value="90" />
     <ctl name="IIR1 INP2 Volume" value="90" />
     <ctl name="IIR1 INP3 Volume" value="90" />
     <ctl name="IIR1 INP4 Volume" value="90" />
+    
+    <!-- analog gains for ADCs. MSM8916 has only ADC1 and ADC2 -->
     <ctl name="ADC1 Volume" value="9" />
     <ctl name="ADC2 Volume" value="9" />
     <ctl name="ADC3 Volume" value="9" />
+    
+    <-- digital gains for decimation filters DEC1 and DEC2 -->
+    <-- 84 = 0 dB -->
     <ctl name="DEC1 Volume" value="77" />
     <ctl name="DEC2 Volume" value="90" />
+    
+    <-- DEC1 and DEC2, ADC2 and RDAC1 MUXs -->
     <ctl name="DEC2 MUX" value="ZERO" />
     <ctl name="DEC1 MUX" value="ZERO" />
     <ctl name="ADC2 MUX" value="ZERO" />
     <ctl name="RDAC2 MUX" value="ZERO" />
+    
+    <-- Mixer2 settings. MIX2 possible inputs are:    -->
+    <-- ZERO, IIR1, IIR2. Typically used for sidetone -->
     <ctl name="RX2 MIX2 INP2" value="ZERO" />
     <ctl name="RX2 MIX2 INP1" value="ZERO" />
     <ctl name="RX1 MIX2 INP2" value="ZERO" />
     <ctl name="RX1 MIX2 INP1" value="ZERO" />
+    
+    <-- Mixer1 settings. MIX1 possible inputs are: -->
+    <-- ZERO, DEC1, DEC2, RX1, RX2, RX3            -->
     <ctl name="RX3 MIX1 INP2" value="ZERO" />
     <ctl name="RX3 MIX1 INP1" value="ZERO" />
     <ctl name="RX2 MIX1 INP2" value="ZERO" />
     <ctl name="RX2 MIX1 INP1" value="ZERO" />
     <ctl name="RX1 MIX1 INP2" value="ZERO" />
     <ctl name="RX1 MIX1 INP1" value="ZERO" />
+   
     <ctl name="EAR_S" value="ZERO" />
+    
+    <!-- headphone channels, left/right -->
     <ctl name="HPHL" value="ZERO" />
     <ctl name="HPHR" value="ZERO" />
+    
+    <!-- speaker settings -->
     <ctl name="SPK DAC Switch" value="0" />
     <ctl name="Speaker Boost" value="ENABLE" />
+    
+    <!-- earpiece settings -->
     <ctl name="EAR PA Boost" value="ENABLE" />
     <ctl name="EAR PA Gain" value="POS_1P5_DB" />
+    
+    <!-- I2S interfaces settings -->
     <ctl name="MI2S_RX Channels" value="One" />
     <ctl name="MI2S_TX Channels" value="One" />
 
@@ -539,58 +570,82 @@
     </path>
 
     <!-- These are actual sound device specific mixer settings -->
+   
     <path name="adc1">
+    	<!-- connect DEC1 (TX1) is to ADC1 (handset mic) -->
         <ctl name="DEC1 MUX" value="ADC1" />
     </path>
 
     <path name="adc2">
+    	<!-- connect DEC1 (TX1) to ADC2 (muxed) -->	
         <ctl name="DEC1 MUX" value="ADC2" />
     </path>
-
+    
+    <!-- does INP3 exist on the trunk?    -->
     <path name="adc3">
+    	<!-- connect DEC1 (TX1) to ADC2 -->
         <ctl name="DEC1 MUX" value="ADC2" />
+        <--! and ADC to INP3 -->
         <ctl name="ADC2 MUX" value="INP3" />
     </path>
 
     <path name="speaker">
+    	<!-- RX1 -> RX3 -->
         <ctl name="RX3 MIX1 INP1" value="RX1" />
+        <!-- turn on DAC -->
         <ctl name="SPK DAC Switch" value="1" />
+        <!-- set volume -->
 	<ctl name="RX3 Digital Volume" value="90" />
     </path>
 
     <path name="speaker-mic">
+    	<!-- use ADC1 -->
         <path name="adc1" />
+        <!-- feed ADC1 output to IIR1 for sidetone -->
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
     </path>
 
     <path name="handset">
+    	<!-- RX1 -> RX1 -->
         <ctl name="RX1 MIX1 INP1" value="RX1" />
+        <!-- connect RX1 to RDAC2 -->
         <ctl name="RDAC2 MUX" value="RX1" />
+        <!-- set volume -->
         <ctl name="RX1 Digital Volume" value="77" />
+        <!-- set earpiece gain -->
         <ctl name="EAR PA Gain" value="POS_6_DB" />
         <ctl name="EAR_S" value="Switch" />
     </path>
 
     <path name="handset-mic">
+    	<!-- use ADC1 -->
         <path name="adc1" />
+        <!-- feed ADC1 output to IIR1 for sidetone -->
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
     </path>
 
     <path name="headphones">
+    	<!-- use two I2S RX channels -->
         <ctl name="MI2S_RX Channels" value="Two" />
+        <!-- RX1 -> RX1, RX2 -> RX2 -->
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="RX2 MIX1 INP1" value="RX2" />
+        <!-- connect RX2 to RDAC2 -->
         <ctl name="RDAC2 MUX" value="RX2" />
         <ctl name="HPHL" value="Switch" />
         <ctl name="HPHR" value="Switch" />
     </path>
 
     <path name="headset-mic">
+    	<!-- use ADC2 --->
         <path name="adc2" />
+        <!-- connect INP2 (headset mic) to ADC2 -->
         <ctl name="ADC2 MUX" value="INP2" />
+        <!-- feed ADC2 output to IIR1 for sidetone -->
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
     </path>
 
+    <!-- sidetone IIR filtering: enable bands 1-5 -->
     <path name="sidetone-iir">
         <ctl name="IIR1 Enable Band1" value="1" />
         <ctl name="IIR1 Enable Band2" value="1" />
@@ -600,15 +655,28 @@
     </path>
 
     <path name="sidetone-handset">
+    	<!-- enable IIR1 filtering -->
         <path name="sidetone-iir" />
+        <!-- set IIR1 input (mic) volume -->
         <ctl name="IIR1 INP1 Volume" value="60" />
+        <!-- RX1 = RX1 + IIR1 : earpiece signal is -->
+        <!-- mixed with filtered mouthpiece signal -->
         <ctl name="RX1 MIX2 INP1" value="IIR1" />
     </path>
 
+    <!-- sidetone for headphone: enable bands,    -->
+    <!-- mix RX1 and RX2 (signals to headphones)  -->
+    <!-- with IIR1 (filtered signal from headset  -->
+    <!-- mic, set IIR1 input (mic) volume         -->
     <path name="sidetone-headphone">
+    	<!-- enable IIR1 filtering -->
         <path name="sidetone-iir" />
+        <!-- RX1 = RX1 + IIR1, RX2 = RX2 + IIR1 -->
+        <!-- headphone signals are mixed with   -->
+        <!-- filtered headset mic signal        -->
         <ctl name="RX1 MIX2 INP1" value="IIR1" />
         <ctl name="RX2 MIX2 INP1" value="IIR1" />
+        <!-- set IIR1 input (mic) volume -->
         <ctl name="IIR1 INP1 Volume" value="60" />
     </path>
 
@@ -679,6 +747,7 @@
     </path>
 
     <!-- Dual MIC devices -->
+    <!-- trunk has only one mic -->
     <path name="speaker-dmic-endfire">
         <path name="adc1" />
         <ctl name="DEC2 MUX" value="ADC2" />
