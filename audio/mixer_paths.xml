@@ -728,14 +728,14 @@
 
     <path name="voice-rec-mic">
         <path name="handset-mic" />
-        <!-- set volume and gain for recordings -->
-        <ctl name="ADC1 Volume" value="15" />
+        <!-- set volume and gain for voice recordings -->
+        <ctl name="ADC1 Volume" value="6" />
         <ctl name="DEC1 Volume" value="120" />
     </path>
 
     <path name="camcorder-mic">
         <path name="handset-mic" />
-        <!-- set volume and gain for recordings -->
+        <!-- set volume and gain for video recordings -->
         <ctl name="ADC1 Volume" value="15" />
         <ctl name="DEC1 Volume" value="120" />
     </path>
