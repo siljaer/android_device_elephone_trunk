@@ -328,9 +328,15 @@
     <path name="compress-offload-playback transmission-fm">
         <ctl name="INTERNAL_FM_RX Audio Mixer MultiMedia4" value="1" />
     </path>
-
+    
+    
+    <!-- settings here are used by many apps that record audio and that--> 
+    <!-- do not allow to change input mic. These settings override     --> 
+    <!-- those set in other recording paths, like "camcorder-mic", why?-->
     <path name="audio-record">
         <ctl name="MultiMedia1 Mixer TERT_MI2S_TX" value="1" />
+        <!-- set volume to improve audio recordings with handset mic -->
+        <ctl name="DEC1 Volume" value="120" />
     </path>
     <!-- listen -->
     <ctl name="LSM1 MUX" value="None" />
