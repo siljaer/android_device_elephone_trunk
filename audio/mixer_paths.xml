@@ -336,7 +336,7 @@
     <path name="audio-record">
         <ctl name="MultiMedia1 Mixer TERT_MI2S_TX" value="1" />
         <!-- set volume to improve audio recordings with handset mic -->
-        <ctl name="DEC1 Volume" value="120" />
+        <ctl name="DEC1 Volume" value="110" />
     </path>
     <!-- listen -->
     <ctl name="LSM1 MUX" value="None" />
