@@ -113,7 +113,7 @@
 
     <!-- earpiece settings -->
     <ctl name="EAR PA Boost" value="ENABLE" />
-    <ctl name="EAR PA Gain" value="POS_0_DB" />
+    <ctl name="EAR PA Gain" value="POS_1P5_DB" />
 
     <!-- I2S interfaces settings -->
     <ctl name="MI2S_RX Channels" value="One" />
@@ -602,7 +602,7 @@
         <!-- turn on DAC -->
         <ctl name="SPK DAC Switch" value="1" />
         <!-- set volume -->
-	<ctl name="RX3 Digital Volume" value="90" />
+	<ctl name="RX3 Digital Volume" value="84" />
     </path>
 
     <path name="speaker-mic">
@@ -618,9 +618,9 @@
         <!-- connect RX1 to RDAC2 -->
         <ctl name="RDAC2 MUX" value="RX1" />
         <!-- set volume and gain to prevent echo-->
-        <ctl name="RX1 Digital Volume" value="77" />
+        <ctl name="RX1 Digital Volume" value="84" />
         <!-- set earpiece gain -->
-        <ctl name="EAR PA Gain" value="POS_0_DB" />
+        <ctl name="EAR PA Gain" value="POS_6_DB" />
         <ctl name="EAR_S" value="Switch" />
     </path>
 
@@ -631,7 +631,7 @@
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
         <!-- set volume and gain to prevent echo-->
         <ctl name="ADC1 Volume" value="6" />
-        <ctl name="DEC1 Volume" value="77" />
+        <ctl name="DEC1 Volume" value="84" />
     </path>
 
     <path name="headphones">
@@ -668,7 +668,7 @@
     	<!-- enable IIR1 filtering -->
         <path name="sidetone-iir" />
         <!-- set IIR1 input (mic) volume -->
-        <ctl name="IIR1 INP1 Volume" value="60" />
+        <ctl name="IIR1 INP1 Volume" value="53" />
         <!-- RX1 = RX1 + IIR1 : earpiece signal is -->
         <!-- mixed with filtered mouthpiece signal -->
         <ctl name="RX1 MIX2 INP1" value="IIR1" />
@@ -683,7 +683,7 @@
         <ctl name="RX1 MIX2 INP1" value="IIR1" />
         <ctl name="RX2 MIX2 INP1" value="IIR1" />
         <!-- set IIR1 input (mic) volume -->
-        <ctl name="IIR1 INP1 Volume" value="60" />
+        <ctl name="IIR1 INP1 Volume" value="53" />
     </path>
 
     <path name="voice-handset">
