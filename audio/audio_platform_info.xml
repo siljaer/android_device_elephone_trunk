@@ -28,6 +28,7 @@
     <acdb_ids>
         <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="15" />
         <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="106" />
+        <device name="SND_DEVICE_IN_SPEAKER_MIC" acdb_id="112" />
     </acdb_ids>
 
     <backend_names>
