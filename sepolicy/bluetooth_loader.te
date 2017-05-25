@@ -1,0 +1,13 @@
+allow bluetooth_loader shell_exec:file { getattr } ;
+allow bluetooth_loader toolbox_exec:file { getattr read open execute execute_no_trans };
+allow bluetooth_loader sysfs:file { read open };
+
+allow bluetooth_loader bluetooth_data_file:file { read open};
+
+
+allow bluetooth_loader qmuxd_socket:dir { write search add_name };
+allow bluetooth_loader qmuxd_socket:sock_file { create write };
+allow bluetooth_loader qmuxd:unix_stream_socket { connectto };
+
+allow bluetooth_loader persist_file:dir { search };
+
