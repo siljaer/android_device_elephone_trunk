@@ -238,7 +238,7 @@ vendor/lib/libsmemlog.so
 
 #Trunk
 
-bin/msm_irqbalance
+#bin/msm_irqbalance
 
 
 # Radio (Crackling)
