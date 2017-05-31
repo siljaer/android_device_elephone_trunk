@@ -6,3 +6,6 @@ ifeq ($(HOST_OS),linux)
         endif
     endif
 endif
+
+# Disable dex-preoptimization
+WITH_DEXPREOPT := false
