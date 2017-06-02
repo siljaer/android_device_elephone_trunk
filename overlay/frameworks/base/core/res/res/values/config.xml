@@ -53,7 +53,11 @@
         <item>255</item>
     </integer-array>
 
-    <integer name="config_deviceHardwareKeys">7</integer>
+    <integer name="config_deviceHardwareKeys">71</integer>
+     
+    <!-- long press on home key shows recent apps -->
+  
+    <integer name="config_longPressOnHomeBehavior">1</integer>
 
     <bool name="config_allowAllRotations">true</bool>
 
