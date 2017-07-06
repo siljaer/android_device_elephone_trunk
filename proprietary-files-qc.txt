@@ -41,6 +41,21 @@ vendor/lib64/libbtnv.so
 bin/mm-qcamera-daemon
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegehw.so
+
+vendor/lib/libmmipl.so
+vendor/lib/libmmjpeg.so
+vendor/lib/libmmqjpeg_codec.so
+vendor/lib/liboemcamera.so
+vendor/lib/libqomx_jpegenc.so
+
+# Camera (Trunk)
+vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera_gc2355_front_1lane.so
+vendor/lib/libmmcamera_s5k4h5_8916_back.so
+vendor/lib/libactuator_dw9714.so
+vendor/lib/libactuator_dw9714_camcorder.so
+vendor/lib/libactuator_dw9714_camera.so
+
 vendor/lib/libmmcamera2_c2d_module.so
 vendor/lib/libmmcamera2_cpp_module.so
 vendor/lib/libmmcamera2_frame_algorithm.so
@@ -61,19 +76,7 @@ vendor/lib/libmmcamera_imglib.so
 vendor/lib/libmmcamera_tintless_algo.so
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib/libmmcamera_wavelet_lib.so
-vendor/lib/libmmipl.so
-vendor/lib/libmmjpeg.so
-vendor/lib/libmmqjpeg_codec.so
-vendor/lib/liboemcamera.so
-vendor/lib/libqomx_jpegenc.so
 
-# Camera (Trunk)
-vendor/lib/libmmcamera2_sensor_modules.so
-vendor/lib/libmmcamera_gc2355_front_1lane.so
-vendor/lib/libmmcamera_s5k4h5_8916_back.so
-vendor/lib/libactuator_dw9714.so
-vendor/lib/libactuator_dw9714_camcorder.so
-vendor/lib/libactuator_dw9714_camera.so
 vendor/lib/libchromatix_gc2355_front_1lane_common.so
 vendor/lib/libchromatix_gc2355_front_1lane_preview.so
 vendor/lib/libchromatix_s5k4h5_8916_back_common.so
@@ -117,7 +120,7 @@ vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
 
-# Graphics
+# Graphics (Crackling) updated
 vendor/lib64/egl/eglsubAndroid.so
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
@@ -132,16 +135,17 @@ vendor/lib64/egl/libRBEGL_adreno.so
 vendor/lib64/egl/libRBGLESv1_CM_adreno.so
 vendor/lib64/egl/libRBGLESv2_adreno.so
 vendor/lib64/libadreno_utils.so
-vendor/lib64/libc2d30-a3xx.so
 vendor/lib64/libC2D2.so
+vendor/lib64/libc2d30-a3xx.so
+vendor/lib64/libc2d30-a4xx.so
 vendor/lib64/libCB.so
 vendor/lib64/libgsl.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 vendor/lib64/libOpenCL.so
-vendor/lib64/libRSDriver_adreno.so
 vendor/lib64/librs_adreno.so
 vendor/lib64/librs_adreno_sha1.so
+vendor/lib64/libRSDriver_adreno.so
 vendor/lib64/libsc-a3xx.so
 vendor/lib64/libscale.so
 vendor/lib/egl/eglsubAndroid.so
@@ -158,20 +162,21 @@ vendor/lib/egl/libRBEGL_adreno.so
 vendor/lib/egl/libRBGLESv1_CM_adreno.so
 vendor/lib/egl/libRBGLESv2_adreno.so
 vendor/lib/libadreno_utils.so
-vendor/lib/libc2d30-a3xx.so
 vendor/lib/libC2D2.so
+vendor/lib/libc2d30-a3xx.so
+vendor/lib/libc2d30-a4xx.so
 vendor/lib/libCB.so
 vendor/lib/libgsl.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
 vendor/lib/libOpenCL.so
-vendor/lib/libRSDriver_adreno.so
 vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
+vendor/lib/libRSDriver_adreno.so
 vendor/lib/libsc-a3xx.so
 vendor/lib/libscale.so
 
-# Graphics firmware (Crackling)
+# Graphics firmware (Crackling) updated
 etc/firmware/a300_pfp.fw
 etc/firmware/a300_pm4.fw
 
@@ -186,7 +191,7 @@ vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
 
 # Perf (Crackling)
-vendor/bin/perfd
+vendor/bin/perfd:bin/perfd
 vendor/lib64/libqti-perfd-client.so
 vendor/lib/libqti-perfd-client.so
 
@@ -278,7 +283,7 @@ vendor/lib/libsystem_health_mon.so
 vendor/lib/libxml.so
 
 # Thermal (Crackling)
-vendor/bin/thermal-engine
+vendor/bin/thermal-engine:bin/thermal-engine
 vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
