@@ -120,7 +120,7 @@ vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
 
-# Graphics (Crackling) updated
+# Graphics (Crackling) updated TOS111B
 vendor/lib64/egl/eglsubAndroid.so
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
@@ -176,7 +176,7 @@ vendor/lib/libRSDriver_adreno.so
 vendor/lib/libsc-a3xx.so
 vendor/lib/libscale.so
 
-# Graphics firmware (Crackling) updated
+# Graphics firmware (Crackling) updated TOS11!B
 etc/firmware/a300_pfp.fw
 etc/firmware/a300_pm4.fw
 
@@ -203,7 +203,7 @@ vendor/lib64/libmm-abl-oem.so
 vendor/lib64/libmm-disp-apis.so
 vendor/lib64/libmm-qdcm.so
 
-# Power (Crackling)
+# Power (Crackling) updated TOS111B
 bin/vm_bms
 
 # Qualcomm framework (Crackling)
@@ -282,7 +282,7 @@ vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libsystem_health_mon.so
 vendor/lib/libxml.so
 
-# Thermal (Crackling)
+# Thermal (Crackling) updated TOS111B
 vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
