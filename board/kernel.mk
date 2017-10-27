@@ -3,5 +3,5 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 an
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 TARGET_KERNEL_SOURCE := kernel/elephone/msm8916
-TARGET_KERNEL_CONFIG := omni_trunk_defconfig
+TARGET_KERNEL_CONFIG := aicp_trunk_defconfig
 TARGET_COMPILE_WITH_MSM_KERNEL := true

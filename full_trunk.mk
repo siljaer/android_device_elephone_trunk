@@ -20,36 +20,25 @@
 #
 
 # Get the prebuilt list of APNs
-$(call inherit-product, vendor/omni/config/gsm.mk)
+#$(call inherit-product, vendor/omni/config/gsm.mk)
 
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# must be before including omni part
-TARGET_BOOTANIMATION_SIZE := 640x362
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
-
-# Inherit AOSP device configuration
-$(call inherit-product, device/elephone/trunk/trunk.mk)
+# Inherit device configuration
+$(call inherit-product, device/elephone/trunk/device.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
 # Override AOSP build properties
-PRODUCT_NAME := omni_trunk
+TARGET_VENDOR := Elephone
+PRODUCT_NAME := full_trunk
 PRODUCT_DEVICE := trunk
-PRODUCT_BRAND := elephone
-PRODUCT_MODEL := trunk
-PRODUCT_MANUFACTURER := elephone
+PRODUCT_BRAND := Elephone
+PRODUCT_MODEL := Trunk
+PRODUCT_MANUFACTURER := Elephone
 
-PRODUCT_GMS_CLIENTID_BASE := android-elephone
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=trunk
-# \
-#    BUILD_FINGERPRINT=elephone/trunk/trunk:7.1.1/N4F26O/3587886:user/release-keys \
-#    PRIVATE_BUILD_DESC="trunk-user 7.1.1 N4F26O 3587886 release-keys"
