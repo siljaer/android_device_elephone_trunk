@@ -1,4 +1,1 @@
-allow mediaserver property_socket:sock_file { write };
-allow mediaserver init:unix_stream_socket { connectto };
-allow mediaserver mpctl_socket:dir { search };
-allow mediaserver socket_device:sock_file { write };
+allow mediaserver socket_device:sock_file write;
