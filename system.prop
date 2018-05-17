@@ -1,0 +1,35 @@
+# Audio
+ro.qc.sdk.audio.fluencetype=none
+persist.audio.fluence.voicecall=false
+persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=false
+
+# Display
+ro.sf.lcd_density=300
+
+# Radio
+ro.telephony.default_network=9,9
+ro.telephony.ril.config=simactivation,sim2gsmonly
+persist.data.target=dpm1
+persist.radio.apm_sim_not_pwdn=1
+persist.radio.multisim.config=dsds
+persist.radio.custom_ecc=1
+persist.radio.ecc_hard_1=998
+persist.radio.ecc_hard_count=1
+rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
+ril.subscription.types=NV,RUIM
+
+#Enable B service adj transition by default
+ro.sys.fw.bservice_enable=true
+ro.sys.fw.bservice_limit=5
+ro.sys.fw.bservice_age=5000
+
+# Latest hardware revision supported
+ro.product.model.platform=1
+
+# disable all camera debug
+persist.camera.hal.debug.mask=0
+
+# Factory reset protection
+ro.frp.pst=/dev/block/bootdevice/by-name/config
+
