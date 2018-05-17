@@ -1,6 +1,6 @@
 # Media
 
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := false
 PRODUCT_PACKAGES += \
     qcmediaplayer \
     libqcmediaplayer
