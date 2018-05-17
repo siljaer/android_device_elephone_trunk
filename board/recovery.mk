@@ -1,4 +1,6 @@
 # Recovery
+#TARGET_NO_RECOVERY := true
+
 TARGET_RECOVERY_FSTAB := device/elephone/trunk/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 	:= true
 BOARD_HAS_NO_SELECT_BUTTON 	:= true
