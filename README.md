@@ -1,5 +1,5 @@
 # android_device_elephone_trunk
-AICP device tree for Elephone Trunk
+Halium 7.1 device tree for Elephone Trunk
 
 Based on the work by @dev-harsh1998 for the A6000: https://github.com/AICP/device_lenovo_a6000
 
